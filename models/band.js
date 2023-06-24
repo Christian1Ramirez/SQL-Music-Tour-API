@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    band_name: {
+    name: {
         type: DataTypes.STRING(255),
         allowNull: false
     },
@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Band',
-    tableName: 'bands',
+    tableName: 'band',
     timestamps: false
   })
   return Band;
