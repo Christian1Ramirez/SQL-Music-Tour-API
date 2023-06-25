@@ -1,7 +1,7 @@
 // DEPENDENCIES
 const bands = require('express').Router()
 const db = require('../models')
-const { Band, MeetGreet, Event, setTime } = db
+const { Band, MeetGreet, Event, SetTime } = db
 const { Op } = require('sequelize')
 
 // ENDPOINTS
@@ -32,8 +32,8 @@ bands.get('/:name', async (req, res) => {
                 where: { name: { [Op.like]: `%${req.query.event ? req.query.event : ''}%` } }
                 } 
             }, {
-                model: setTime,
-                as: 'set_times'    ,
+                model: SetTime,
+                as: 'set_times',
                 include: { 
                     model: Event, 
                     as: 'event',

@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'event_id',
         as: 'event'
       })
-    }
+    } 
   }
   MeetGreet.init({
     meet_greet_id: {
@@ -45,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'MeetGreet',
-    tableName: 'meet_greets',
+    tableName: 'meet_greet',
     timestamps: false
   });
   return MeetGreet;
